@@ -234,7 +234,16 @@
       .site-header, .page-shell { inline-size: min(100% - 20px, 1120px); }
       .language-switch button { padding-inline: 12px; }
       .policy-hero, .prose { padding: 28px 22px; }
-      h1 { max-inline-size: 12ch; }
+      .policy-title {
+        max-inline-size: none;
+        font-size: clamp(1.75rem, 8vw, 2rem);
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+      }
+      .policy-title span {
+        display: block;
+        white-space: nowrap;
+      }
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -280,7 +289,7 @@
       <section data-language-content="zh-CN">
         <header class="policy-hero">
           <p class="eyebrow">隐私状态 · 完全离线</p>
-          <h1>你的练习声音，只留在你的设备上</h1>
+          <h1 class="policy-title"><span>你的练习声音，</span><span>只留在你的设备上</span></h1>
           <p class="updated">吉他工具（GuitarTool）隐私政策 · 更新日期：2026 年 8 月 22 日</p>
           <div class="trust-strip" aria-label="隐私摘要">
             <span>无需账户</span><span>音频不上传</span><span>无广告与追踪</span>
@@ -319,7 +328,7 @@
       <section data-language-content="en" lang="en" hidden>
         <header class="policy-hero">
           <p class="eyebrow">Privacy status · Fully offline</p>
-          <h1>Your practice audio stays on your device</h1>
+          <h1 class="policy-title"><span>Your practice audio</span> <span>stays on your device</span></h1>
           <p class="updated">GuitarTool Privacy Policy · Updated August 22, 2026</p>
           <div class="trust-strip" aria-label="Privacy summary">
             <span>No account</span><span>No audio uploads</span><span>No ads or tracking</span>
