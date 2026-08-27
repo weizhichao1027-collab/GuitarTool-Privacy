@@ -6,7 +6,19 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#e7f6fb">
   <meta name="description" content="GuitarTool 隐私政策：离线运行、音频本机处理、不收集个人信息。">
-  <link rel="icon" type="image/png" href="privacy-policy-app-icon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self'; form-action 'none'; img-src 'self'; object-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; upgrade-insecure-requests">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GuitarTool 隐私政策">
+  <meta property="og:description" content="离线运行、音频本机处理、不收集个人信息。">
+  <meta property="og:url" content="https://weizhichao1027-collab.github.io/GuitarTool-Privacy/">
+  <meta property="og:image" content="https://weizhichao1027-collab.github.io/GuitarTool-Privacy/privacy-policy-app-icon-224.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://weizhichao1027-collab.github.io/GuitarTool-Privacy/">
+  <link rel="alternate" hreflang="zh-CN" href="https://weizhichao1027-collab.github.io/GuitarTool-Privacy/">
+  <link rel="alternate" hreflang="en" href="https://weizhichao1027-collab.github.io/GuitarTool-Privacy/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://weizhichao1027-collab.github.io/GuitarTool-Privacy/">
+  <link rel="icon" type="image/png" href="privacy-policy-app-icon-224.png">
   <title>GuitarTool 隐私政策</title>
   <style>
     :root {
@@ -275,7 +287,7 @@
   <header class="site-header">
     <div class="brand" aria-label="GuitarTool">
       <span class="brand-mark" aria-hidden="true">
-        <img src="privacy-policy-app-icon.png" alt="" width="42" height="42">
+        <img src="privacy-policy-app-icon-224.png" alt="" width="42" height="42">
       </span>
       <span>GuitarTool</span>
     </div>
@@ -384,17 +396,36 @@
     (() => {
       const buttons = Array.from(document.querySelectorAll("[data-language]"));
       const sections = Array.from(document.querySelectorAll("[data-language-content]"));
-      const applyLanguage = (requested) => {
+      const metadata = {
+        "zh-CN": {
+          title: "GuitarTool 隐私政策",
+          description: "GuitarTool 隐私政策：离线运行、音频本机处理、不收集个人信息。",
+        },
+        en: {
+          title: "GuitarTool Privacy Policy",
+          description: "GuitarTool works offline, processes audio on your device, and collects no personal information.",
+        },
+      };
+      const applyLanguage = (requested, updateUrl = false) => {
         const language = requested.toLowerCase().startsWith("zh") ? "zh-CN" : "en";
         document.documentElement.lang = language;
-        document.title = language === "zh-CN" ? "GuitarTool 隐私政策" : "GuitarTool Privacy Policy";
+        document.title = metadata[language].title;
+        document.querySelector('meta[name="description"]').content = metadata[language].description;
+        document.querySelector('meta[property="og:title"]').content = metadata[language].title;
+        document.querySelector('meta[property="og:description"]').content = metadata[language].description;
         sections.forEach((section) => { section.hidden = section.dataset.languageContent !== language; });
         buttons.forEach((button) => {
           button.setAttribute("aria-pressed", String(button.dataset.language === language));
         });
+        if (updateUrl) {
+          const url = new URL(location.href);
+          if (language === "en") url.searchParams.set("lang", "en");
+          else url.searchParams.delete("lang");
+          history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+        }
       };
       buttons.forEach((button) => {
-        button.addEventListener("click", () => applyLanguage(button.dataset.language));
+        button.addEventListener("click", () => applyLanguage(button.dataset.language, true));
       });
       const requested = new URLSearchParams(location.search).get("lang");
       const systemLanguage = (navigator.languages && navigator.languages[0]) || navigator.language || "en";
