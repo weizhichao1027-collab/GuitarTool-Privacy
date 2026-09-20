@@ -302,7 +302,7 @@
         <header class="policy-hero">
           <p class="eyebrow">隐私状态 · 音频留在本机</p>
           <h1 class="policy-title"><span>你的练习声音，</span><span>只留在你的设备上</span></h1>
-          <p class="updated">吉他工具（GuitarTool）隐私政策 · 更新日期：2026 年 9 月 9 日</p>
+          <p class="updated">吉他工具（GuitarTool）隐私政策 · 更新日期：2026 年 9 月 20 日</p>
           <div class="trust-strip" aria-label="隐私摘要">
             <span>无需账户</span><span>音频不上传</span><span>无广告与追踪</span>
           </div>
@@ -310,7 +310,7 @@
         <div class="prose">
           <p class="lead">卫智超（以下简称“开发者”）重视你的隐私。本政策说明 GuitarTool 在调音、节拍练习、和弦查询、主屏幕小组件和 Apple Watch 功能中如何处理信息。</p>
           <h2 id="zh-collection">1. 我们不收集哪些信息</h2>
-          <p><strong>GuitarTool 不出售个人信息，也不将信息用于广告或追踪。</strong>本应用无需注册或登录，不收集姓名、邮箱、电话号码、精确位置、通讯录、照片、设备广告标识符或使用行为分析数据，也不集成广告、分析或第三方追踪 SDK。</p>
+          <p><strong>GuitarTool 不出售个人信息，也不将信息用于广告或追踪。</strong>本应用无需注册或登录，不收集姓名、邮箱、电话号码、精确位置、通讯录、照片或设备广告标识符，也不集成广告或第三方分析、追踪 SDK。只有在你明确同意后，应用才会处理第 5 节所述的匿名汇总使用分析。</p>
           <h2 id="zh-microphone">2. 麦克风与音频处理</h2>
           <p>只有当你主动启动调音器时，应用才会请求麦克风权限。麦克风音频用于在设备上实时计算音高、音分、信号强度和稳定度。</p>
           <ul>
@@ -324,16 +324,19 @@
           <p>启用节拍器闪光反馈时，应用只在前台且节拍器页面可见时控制设备闪光灯，不拍摄照片或视频，也不会读取相机画面。切换页面、进入后台或停止节拍器后，应用会请求立即关闭闪光灯。</p>
           <h2 id="zh-storage">4. 本地设置与 App Group</h2>
           <p>为了记住你的练习环境，应用会在设备上保存节拍器速度、拍号、训练方案、调音预设、主题和界面语言等设置。部分节拍器状态通过 Apple App Group 在 GuitarTool 与其主屏幕小组件之间共享，以便小组件显示和控制同一套本地设置。</p>
-          <div class="local-note"><strong>这些设置不会离开你的设备。</strong>删除应用通常也会删除其本地数据；系统备份行为由你的 iOS 与 iCloud 设置决定。</div>
+          <div class="local-note"><strong>这些设置保存在你的设备上；界面语言可同步至配对的 Apple Watch。</strong>删除应用通常也会删除其本地数据；系统备份行为由你的 iOS 与 iCloud 设置决定。</div>
           <h2 id="zh-services">5. 网络、第三方服务与追踪</h2>
-          <p>GuitarTool 的核心功能不需要网络连接。应用不包含第三方广告、分析或追踪服务，不创建用户画像，也不进行跨应用或跨网站追踪。</p>
+          <p>GuitarTool 的核心功能不需要网络连接。应用不包含第三方广告、分析或追踪 SDK，不创建用户画像，也不进行跨应用或跨网站追踪。</p>
+          <p><strong>可选匿名使用分析：</strong>非中国大陆地区的用户可以选择发送功能使用次数和使用时长。应用先在设备上按日、周、月汇总节拍器、调音器、和弦库、主题、主屏幕小组件和 Apple Watch 的产品交互，只发送汇总数字、报告周期、App 版本、界面语言、平台和 App Store 国家或地区代码。报告不包含姓名、邮箱、麦克风音频、和弦内容、练习内容、IDFA、IDFV 或其他稳定设备标识符；每份报告只使用一个随机报告 ID 来处理重试和去重，该 ID 不跨报告复用。</p>
+          <p>只有你在应用内选择“允许匿名分析”后才会生成和发送这些汇总。你可以在“个性化 → 隐私与数据”中随时关闭；关闭会立即清除尚未发送的本地汇总。海外报告通过 HTTPS 发送到开发者位于阿里云新加坡区域的第一方分析服务。该接收层不保留 IP、User-Agent 或请求明细访问日志；日/周匿名汇总最多保留 35 天，不可跨月关联的月度匿名汇总最多保留 25 个月，仅用于产品分析和功能改进。</p>
+          <p>当前版本在 App Store 中国大陆店面或设备地区判定为中国大陆时完全停用使用分析：不显示同意提示、不建立分析累加器、不排队，也不会向新加坡发送分析请求。待备案和上海服务完成后，开发者只会通过后续 App 版本另行启用，并在启用前更新说明。</p>
           <p>打开主题展厅时，应用会从开发者配置的主题服务获取目录；预览主题时会下载图片并缓存到设备。该服务使用阿里云函数计算和对象存储。处理这些网络请求需要在请求期间传输 IP 地址、请求路径等连接信息，但生产主题服务已关闭请求明细日志，开发者不会在请求完成后保留这些连接信息；应用也不附带音频、练习记录或广告标识符。已下载主题可离线使用，核心工具无需访问主题服务。</p>
-          <p>App 的全部练习功能均免费；仅可选完整视觉主题为付费内容。五套付费主题分别通过 Apple App Store 以非消耗型一次性内购买；每套购买后永久解锁，无订阅。Apple 处理账户和付款；应用通过 StoreKit 在设备上验证商品和交易状态，用于解锁主题及恢复购买。开发者不接收你的银行卡资料，也不将购买记录上传到主题服务。主题展厅后续会持续推出新的付费主题。</p>
+          <p>App 的全部练习功能均免费；仅可选完整视觉主题为付费内容。五套付费主题分别通过 Apple App Store 以非消耗型一次性内购买；每套购买后永久解锁，无订阅。Apple 处理账户和付款；应用通过 StoreKit 在设备上验证商品和交易状态，用于解锁主题及恢复购买。开发者不接收你的银行卡资料。下载付费主题时，应用会通过 HTTPS 将该主题的 Apple 签名交易凭据发送到开发者的主题服务。服务验证签名，并向 Apple 查询该笔交易的当前状态，处理商品标识、交易标识、购买环境及退款或撤销状态，以确认下载权益并签发最长一小时有效的素材下载凭据。主题服务不将该交易凭据写入业务存储或请求明细日志；交易校验不包含麦克风音频或练习记录。退款或权益撤销后，不再授予新的下载授权。主题展厅后续会持续推出新的付费主题。</p>
           <p>本隐私政策网页本身不加载外部字体、分析脚本或追踪像素，不设置 Cookie。语言切换只改变当前页面显示，不会向服务器发送偏好。</p>
           <h2 id="zh-children">6. 儿童隐私</h2>
           <p>GuitarTool 不要求儿童或其他用户提交个人资料。由于应用不提供账户、社交或数据上传功能，儿童使用时不会因此向开发者提交个人资料。</p>
           <h2 id="zh-security">7. 数据安全与你的选择</h2>
-          <p>最小化数据是本应用的主要保护方式：音频不上传、不留存，练习设置只保存在 Apple 平台提供的本地存储中。你可以通过应用设置修改偏好，通过系统设置管理麦克风和照片权限，或删除应用及其本地数据。</p>
+          <p>最小化数据是本应用的主要保护方式：音频不上传、不留存，练习设置只保存在 Apple 平台提供的本地存储中；可选分析只发送设备端汇总且不使用稳定标识符。你可以通过“个性化 → 隐私与数据”管理匿名分析，通过系统设置管理麦克风和照片权限，或删除应用及其本地数据。</p>
           <h2 id="zh-changes">8. 政策更新</h2>
           <p>如果应用的数据处理方式发生变化，本页面会更新日期并说明新的处理方式。涉及新数据收集或新权限时，将在功能启用前提供清楚说明，并按适用规则取得许可。</p>
           <h2 id="zh-contact">9. 联系开发者</h2>
@@ -346,7 +349,7 @@
         <header class="policy-hero">
           <p class="eyebrow">Privacy status · Audio stays local</p>
           <h1 class="policy-title"><span>Your practice audio</span> <span>stays on your device</span></h1>
-          <p class="updated">GuitarTool Privacy Policy · Updated September 9, 2026</p>
+          <p class="updated">GuitarTool Privacy Policy · Updated September 20, 2026</p>
           <div class="trust-strip" aria-label="Privacy summary">
             <span>No account</span><span>No audio uploads</span><span>No ads or tracking</span>
           </div>
@@ -354,7 +357,7 @@
         <div class="prose">
           <p class="lead">Zhichao Wei (the “developer”) respects your privacy. This policy explains how GuitarTool handles information across tuning, metronome practice, chord lookup, Home Screen widgets, and Apple Watch features.</p>
           <h2 id="en-collection">1. Information we do not collect</h2>
-          <p><strong>GuitarTool does not sell personal information or use it for advertising or tracking.</strong> The app requires no account or sign-in. It does not collect names, email addresses, phone numbers, precise location, contacts, photos, advertising identifiers, or usage analytics, and it contains no advertising, analytics, or third-party tracking SDKs.</p>
+          <p><strong>GuitarTool does not sell personal information or use it for advertising or tracking.</strong> The app requires no account or sign-in. It does not collect names, email addresses, phone numbers, precise location, contacts, photos, or advertising identifiers, and it contains no advertising or third-party analytics or tracking SDKs. The app processes the optional anonymous, aggregated product analytics described in Section 5 only after you expressly consent.</p>
           <h2 id="en-microphone">2. Microphone and audio processing</h2>
           <p>The app requests microphone access only when you start the tuner. Microphone audio is used on your device to calculate pitch, cents, signal strength, and stability in real time.</p>
           <ul>
@@ -368,16 +371,19 @@
           <p>When metronome torch feedback is enabled, the app controls the device torch only while the app is in the foreground and the metronome page is visible. It does not capture photos, video, or camera frames. The app requests that the torch turn off when you switch pages, enter the background, or stop the metronome.</p>
           <h2 id="en-storage">4. Local settings and App Group sharing</h2>
           <p>The app stores settings such as tempo, time signature, practice presets, tuning presets, theme, and interface language on your device. Some metronome state is shared through an Apple App Group between GuitarTool and its Home Screen widget so the widget can display and control the same local configuration.</p>
-          <div class="local-note"><strong>These settings do not leave your device.</strong> Deleting the app normally removes its local data. System backup behavior depends on your iOS and iCloud settings.</div>
+          <div class="local-note"><strong>These settings stay on your devices; the interface language may sync to your paired Apple Watch.</strong> Deleting the app normally removes its local data. System backup behavior depends on your iOS and iCloud settings.</div>
           <h2 id="en-services">5. Network use, third parties, and tracking</h2>
-          <p>GuitarTool's core features do not require an internet connection. The app includes no third-party advertising, analytics, or tracking services, creates no user profile, and performs no cross-app or cross-site tracking.</p>
+          <p>GuitarTool's core features do not require an internet connection. The app includes no third-party advertising, analytics, or tracking SDKs, creates no user profile, and performs no cross-app or cross-site tracking.</p>
+          <p><strong>Optional anonymous usage analytics:</strong> Users outside mainland China may choose to send feature-use counts and time spent. The app first aggregates product interactions for the metronome, tuner, chord library, themes, Home Screen widget, and Apple Watch on the device by day, week, and month. It sends only aggregate numbers, the reporting period, app version, interface language, platform, and App Store country or region code. Reports contain no names, email addresses, microphone audio, chord content, practice content, IDFA, IDFV, or other persistent device identifiers. Each report has a random report ID used only for retry handling and deduplication, and that ID is not reused across reports.</p>
+          <p>These aggregates are created and sent only after you select “Allow Anonymous Analytics.” You can turn analytics off at any time under Personalization → Privacy &amp; Data; doing so immediately clears unsent local aggregates. Reports from other storefronts are sent over HTTPS to the developer's first-party analytics service in Alibaba Cloud's Singapore region. The ingestion layer does not retain IP addresses, User-Agent values, or request-detail access logs. Anonymous daily and weekly aggregates are retained for up to 35 days; monthly anonymous aggregates that cannot be linked across months are retained for up to 25 months, solely for product analytics and feature improvement.</p>
+          <p>In this version, usage analytics is completely disabled when the App Store storefront or device region resolves to mainland China: the app does not show the consent prompt, create analytics accumulators, queue reports, or send analytics requests to Singapore. The developer will enable mainland-China analytics only in a later app version after filing and Shanghai hosting are complete, with updated disclosure before activation.</p>
           <p>Opening the theme gallery fetches a catalog from the developer’s configured theme service; previewing a theme downloads images that are cached on your device. The service uses Alibaba Cloud Function Compute and Object Storage Service. Delivering these requests transmits connection information, such as your IP address and request paths, only while the request is being served. Request-detail logging is disabled for the production theme service, so the developer does not retain this connection information after the request completes. The app does not attach audio, practice records, or advertising identifiers. Downloaded themes work offline; core tools do not require the theme service.</p>
-          <p>All practice features are free; only optional complete visual themes are paid. The five paid themes are separate non-consumable, one-time purchases through the Apple App Store. Each purchase unlocks that theme permanently; there is no subscription. Apple handles accounts and payments. The app uses StoreKit to verify product and transaction status on your device to unlock themes and restore purchases. The developer does not receive your card details or upload purchase records to the theme service. More paid themes will be added to the gallery over time.</p>
+          <p>All practice features are free; only optional complete visual themes are paid. The five paid themes are separate non-consumable, one-time purchases through the Apple App Store. Each purchase unlocks that theme permanently; there is no subscription. Apple handles accounts and payments. The app uses StoreKit to verify product and transaction status on your device to unlock themes and restore purchases. The developer does not receive your card details. To download a paid theme, the app sends the Apple-signed transaction for that theme over HTTPS to the developer’s theme service. The service verifies the signature and queries Apple for the current transaction status, processing product and transaction identifiers, the purchase environment, and refund or revocation status to confirm entitlement and issue an asset-download credential valid for up to one hour. The theme service does not write the transaction credential to business storage or request-detail logs. This verification contains no microphone audio or practice records. A refunded or revoked purchase no longer receives new download authorization. More paid themes will be added to the gallery over time.</p>
           <p>This privacy policy page does not load external fonts, analytics scripts, or tracking pixels and does not set cookies. The language control changes only the current page display and does not send a preference to a server.</p>
           <h2 id="en-children">6. Children's privacy</h2>
           <p>GuitarTool does not ask children or other users to submit personal profiles. The app has no accounts, social features, or data-upload feature through which a child could submit profile information to the developer.</p>
           <h2 id="en-security">7. Security and your choices</h2>
-          <p>Data minimization is the app's primary protection: audio is neither uploaded nor retained, and practice settings remain in storage provided by Apple platforms. You can change preferences in the app, manage microphone and Photos access in system settings, or delete the app and its local data.</p>
+          <p>Data minimization is the app's primary protection: audio is neither uploaded nor retained, practice settings remain in storage provided by Apple platforms, and optional analytics sends only on-device aggregates without a persistent identifier. You can manage anonymous analytics under Personalization → Privacy &amp; Data, manage microphone and Photos access in system settings, or delete the app and its local data.</p>
           <h2 id="en-changes">8. Changes to this policy</h2>
           <p>If the app's data practices change, this page will show a revised date and describe the new handling. If a feature introduces new data collection or permissions, the app will explain them before the feature is enabled and request consent where required.</p>
           <h2 id="en-contact">9. Contact the developer</h2>
